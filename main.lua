@@ -247,3 +247,22 @@ function mod:bad(player, item)
     }
 end
 mod:AddCallback(ModCallbacks.MC_USE_ITEM, mod.bad, bads)
+local converto = Isaac.GetItemIdByName("Converto")
+function mod:ConvertoUse(item, player)
+    local convertouser = Isaac.GetPlayer()
+    local money = convertouser:GetNumCoins()
+    if money >= 5 then
+        convertouser:AddCoins(-5)
+        convertouser:AddBombs(2)
+        convertouser:AddKeys(2)
+    end
+    if money > 5 then
+        convertouser:AddCoins(0)
+    end
+    return {
+        Discharge = false,
+        Remove = false,
+        ShowAnim = false
+    }
+end
+mod:AddCallback(ModCallbacks.MC_USE_ITEM, mod.ConvertoUse, converto)

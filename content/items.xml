@@ -13,4 +13,5 @@
     <active id="12" name="Golden Surprise" gfx="GoldenSurprise.png" description="Gives golden bomb,key,and heart" quality="3" maxcharges="12" chargetype="normal" />
     <passive id="13" name="Mother's Milk" gfx="MM.png" description="Oi UE ITS MM" quality="2" cache= "firedelay damage" /> 
     <active id="14" name="Blue ArachDiptera" gfx="Test.png" description="Spawns 5 Blue flies and 5 Blue spiders" quality="3" maxcharges="1" chargetype="normal" />
+    <active id="15" name="Converto" gfx="Test.png" description="Convert 5 coins into 2 keys and 2 bombs" quality="3" maxcharges="1" chargetype="normal" />
 </items>

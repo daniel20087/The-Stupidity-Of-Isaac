@@ -13,5 +13,6 @@
        <item Name="Golden Surprise" Weight="1" DecreaseBy="1" RemoveOn="0.1" />
        <item Name="Mother's Milk" Weight="1" DecreaseBy="1" RemoveOn="0.1" />
        <item Name="Blue ArachDiptera" Weight="1" DecreaseBy="1" RemoveOn="0.1" />
+       <item Name="Converto" Weight="1" DecreaseBy="1" RemoveOn="0.1" />
        </Pool>
 </ItemPools>
