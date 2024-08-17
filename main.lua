@@ -266,3 +266,22 @@ function mod:ConvertoUse(item, player)
     }
 end
 mod:AddCallback(ModCallbacks.MC_USE_ITEM, mod.ConvertoUse, converto)
+local mequalh = Isaac.GetItemIdByName("Money == Health")
+function mod:mequalhuse(item, player)
+    local mequaluser = Isaac.GetPlayer()
+    local money = mequaluser:GetNumCoins()
+    if money >= 20 then
+        mequaluser:AddCoins(-20)
+        mequaluser:AddMaxHearts(2)
+	mequaluser:AddHearts(2)
+    end
+    if money < 20 then
+        mequaluser:AddCoins(0)
+    end
+    return {
+        Discharge = false,
+        Remove = false,
+        ShowAnim = false
+    }
+end
+mod:AddCallback(ModCallbacks.MC_USE_ITEM, mod.mequalhuse, mequalh)
