@@ -4,6 +4,7 @@ Isaac mod
 Download as zip and extract into isaac mods folder
 
 Item descriptions:
+
 Beer Bottle: Gives 0.5 Speed, 3 damage and applys poison to all enemies in the room
 
 The Peak: 24 room charge kills all enemies in the room
