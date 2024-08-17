@@ -11,5 +11,6 @@
     <passive id="10" name= "Tester" gfx="Test.png" description="Spindown Dice Abuser :(" quality = "4" />
     <active id="11" name="Restored Heart" gfx="RestoredHeart.png" description="Removes broken hearts and adds maxheart" quality="4" maxcharges="6" chargetype="normal" />
     <active id="12" name="Golden Surprise" gfx="GoldenSurprise.png" description="Gives golden bomb,key,and heart" quality="3" maxcharges="12" chargetype="normal" />
-    <passive id="13" name="Mother's Milk" gfx="MM.png" description="Oi UE ITS MM" quality="2" cache= "firedelay damage" />
+    <passive id="13" name="Mother's Milk" gfx="MM.png" description="Oi UE ITS MM" quality="2" cache= "firedelay damage" /> 
+    <active id="14" name="Blue ArachDiptera" gfx="Test.png" description="Spawns 5 Blue flies and 5 Blue spiders" quality="3" maxcharges="1" chargetype="normal" />
 </items>
