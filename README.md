@@ -30,3 +30,9 @@ Restored Heart: Removes broken hearts and gives isaac back his lost health
 Golden Surprise: Gives isaac Golden Bombs, Keys, And Hearts
 
 Mother's Milk: Opposite of Soy milk
+
+Blue ArachDiptera: Spawns 5 blue Fly and 5 Blue Spiders
+
+Converto: Converts 5 Coins into 2 Bombs and 2 Keys
+
+Money == Health: Converts 20 Coins into A Heart Container
