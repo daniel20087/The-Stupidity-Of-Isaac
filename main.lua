@@ -230,3 +230,20 @@ function mod:MotherM(player, cacheFlags)
     end
 end
 mod:AddCallback(ModCallbacks.MC_EVALUATE_CACHE, mod.MotherM)
+local bads = Isaac.GetItemIdByName("Blue ArachDiptera")
+function mod:bad(player, item)
+    local baduser = Isaac.GetPlayer()
+    local userpost = baduser.Position
+    local spider = 0
+    while spider < 5 do
+        baduser:AddBlueSpider(userpost)
+        spider = spider + 1
+    end
+    baduser:AddBlueFlies(5, userpost, baduser)
+    return{
+        Discharge = true,
+        Remove = false,
+        ShowAnim = true
+    }
+end
+mod:AddCallback(ModCallbacks.MC_USE_ITEM, mod.bad, bads)
