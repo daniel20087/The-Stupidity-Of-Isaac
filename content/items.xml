@@ -1,0 +1,15 @@
+<items gfxroot="gfx/items/" version="1">
+    <passive id="1" name="Beer Bottle" gfx="Beer_Bottle.png" description="The Power Of Beer Gives 0.5 speed and 3 damage also applys poison to all enemies in the room dealing the players damage" quality="4" cache="damage speed" />
+    <active  id="2" name="The Peak" gfx="ThePeak.png" description="The Peak only lets you use his powers once every 24 charges" quality="4" maxcharges="24" chargetype="normal" />
+    <passive id="3" name="Death" gfx="Death.png" description="Why" quality="0" cache = "damage teardelay" />
+    <passive id="4" name="Life" gfx="Life.png" description="Why" quality="0" cache = "damage teardelay" />
+    <passive id="5" name="The Middle Ground" gfx="TheMiddleGround.png" description="In between life and death" quality="4" cache = "damage firedelay" />
+    <passive id="6" name="Lucky Damage" gfx="LuckyDamage.png" description="More damage == More luck (Note Shitty Code)" quality="4" cache = "damage luck" />
+    <passive id="7" name="50 Cent" gfx="fifcent.png" description="Holy shit its 50 cent" quality="1" />
+    <passive id="8" name="Torch" gfx="Torch.png" description="All stats up" quality="2" cache = "damage firedelay luck shotspeed range speed" />
+    <passive id="9" name="All Up" gfx="allup.png" description="All Up" quality="3" cache = "damage firedelay luck shotspeed range speed" />
+    <passive id="10" name= "Tester" gfx="Test.png" description="Spindown Dice Abuser :(" quality = "4" />
+    <active id="11" name="Restored Heart" gfx="RestoredHeart.png" description="Removes broken hearts and adds maxheart" quality="4" maxcharges="6" chargetype="normal" />
+    <active id="12" name="Golden Surprise" gfx="GoldenSurprise.png" description="Gives golden bomb,key,and heart" quality="3" maxcharges="12" chargetype="normal" />
+    <passive id="13" name="Mother's Milk" gfx="MM.png" description="Oi UE ITS MM" quality="2" cache= "firedelay damage" />
+</items>

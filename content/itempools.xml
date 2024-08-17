@@ -1,0 +1,16 @@
+<ItemPools>
+    <Pool Name="treasure">
+       <Item Name="Beer Bottle" Weight="1" DecreaseBy="1" RemoveOn="0.1"/>
+       <Item Name="The Peak" Weight="1" DecreaseBy="1" RemoveOn="0.1"/>
+       <item Name="Death" Weight="1" DecreaseBy="1" RemoveOn="0.1" />
+       <item Name="Life" Weight="1" DecreaseBy="1" RemoveOn="0.1" />
+       <item Name="The Middle Ground" Weight="1" DecreaseBy="1" RemoveOn="0.1" />
+       <item Name="Lucky Damage" Weight="1" DecreaseBy="1" RemoveOn="0.1" />
+       <item Name="50 Cent" Weight="1" DecreaseBy="1" RemoveOn="0.1" />
+       <item Name="Torch" Weight="1" DecreaseBy="1" RemoveOn="0.1" />
+       <item Name="All Up" Weight="1" DecreaseBy="1" RemoveOn="0.1" />
+       <item Name="Restored Heart" Weight="1" DecreaseBy="1" RemoveOn="0.1"  />
+       <item Name="Golden Surprise" Weight="1" DecreaseBy="1" RemoveOn="0.1" />
+       <item Name="Mother's Milk" Weight="1" DecreaseBy="1" RemoveOn="0.1" />
+       </Pool>
+</ItemPools>
