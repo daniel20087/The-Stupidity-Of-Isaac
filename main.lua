@@ -285,3 +285,15 @@ function mod:mequalhuse(item, player)
     }
 end
 mod:AddCallback(ModCallbacks.MC_USE_ITEM, mod.mequalhuse, mequalh)
+local BlueAndBlack = Isaac.GetItemIdByName("Blue and Black")
+function mod:BABuse(item, player)
+    local BABplayer = Isaac.GetPlayer()
+    BABplayer:AddSoulHearts(2)
+    BABplayer:AddBlackHearts(2)
+    return {
+        Discharge = true,
+        Remove = false,
+        ShowAnim = true,
+    }
+end
+mod:AddCallback(ModCallbacks.MC_USE_ITEM, mod.BABuse, BlueAndBlack)

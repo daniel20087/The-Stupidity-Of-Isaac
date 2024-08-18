@@ -15,4 +15,5 @@
     <active id="14" name="Blue ArachDiptera" gfx="SF.png" description="Spawns 5 Blue flies and 5 Blue spiders" quality="3" maxcharges="1" chargetype="normal" />
     <active id="15" name="Converto" gfx="CBK.png" description="Convert 5 coins into 2 keys and 2 bombs" quality="3" maxcharges="1" chargetype="normal" />
     <active id="16" name="Money == Health" gfx="MH.png" description="Convert 20 coins into a heart container" quality="3" maxcharges="1" chargetype="normal" />
+    <active id="17" name="Blue And Black" gfx="BlueAndBlack.png" description="Adds 1 Black Heart And 1 Soul Heart" quality="3" maxcharges="6" chargetype="normal" />
 </items>
