@@ -1,6 +1,8 @@
 # The-Stupidity-Of-Isaac
 Isaac mod
 
+Code sucks but if it works it works
+
 Download as zip and extract into isaac mods folder
 
 Item descriptions:
