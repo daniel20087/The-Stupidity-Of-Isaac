@@ -44,3 +44,7 @@ Blue and Black: Adds one soul heart and one black heart
 PillSmaller: actives one makes you smaller pill
 
 Portable Death certificate: Uses Death Certificate
+
+Portable Forget me now: uses forget me now
+
+Max speed: 2.0 speed
