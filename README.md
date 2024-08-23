@@ -5,6 +5,8 @@ Code sucks but if it works it works
 
 Download as zip and extract into isaac mods folder
 
+all items in treasure room item pool (except for tester which isnt in any item pool)
+
 Item descriptions:
 
 Beer Bottle: Gives 0.5 Speed, 3 damage and applys poison to all enemies in the room
