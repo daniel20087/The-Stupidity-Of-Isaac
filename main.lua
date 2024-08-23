@@ -319,3 +319,22 @@ function mod:Dcuse(item, player)
     }
 end
 mod:AddCallback(ModCallbacks.MC_USE_ITEM, mod.Dcuse, deathcertificates)
+local pfd = Isaac.GetItemIdByName("Portable Forget me now")
+function mod:Pfmn(item, player)
+    Isaac.GetPlayer():UseActiveItem(CollectibleType.COLLECTIBLE_FORGET_ME_NOW, UseFlag.USE_NOANIM)
+    return{
+        Discharge = true,
+        Remove = false,
+        ShowAnim = true
+    }
+end
+mod:AddCallback(ModCallbacks.MC_USE_ITEM, mod.Pfmn, pfd)
+local msa = Isaac.GetItemIdByName("Max Speed")
+function mod:ms(player, cacheFlags)
+    local msaamount = player:GetCollectibleNum(msa)
+    if msaamount > 0 then
+        player.MoveSpeed = 2
+    end
+end
+mod:AddCallback(ModCallbacks.MC_EVALUATE_CACHE, mod.ms)
+--hope you had fun reading this code slop

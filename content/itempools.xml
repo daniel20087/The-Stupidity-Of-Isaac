@@ -17,5 +17,7 @@
        <item Name="Blue And Black" Weight="1" DecreaseBy="1" RemoveOn="0.1" />
        <item Name="PillSmaller" Weight="1" DecreaseBy="1" RemoveOn="0.1" />
        <item Name="Portable Death Certificate" Weight="0.5" DecreaseBy="0.5" RemoveOn="0.1" />
+       <item Name="Portable Forget me now" Weight="1" DecreaseBy="1" RemoveOn="0.1" />
+       <item name="Max Speed" Weight="1" DecreaseBy="1" RemoveOn="0.1" />
        </Pool>
 </ItemPools>
