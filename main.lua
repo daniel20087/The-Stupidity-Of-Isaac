@@ -129,7 +129,7 @@ local LD = Isaac.GetItemIdByName("Lucky Damage")
 function mod:LuckyDamage(player, cacheFlags)
     local LDITEMCOUNT = player:GetCollectibleNum(LD)
     if LDITEMCOUNT > 0 then
-        player.Luck = player.Luck + player.Damage / 20
+        player.Luck = player.Damage * 0.3
     end
 end
 mod:AddCallback(ModCallbacks.MC_EVALUATE_CACHE, mod.LuckyDamage)
@@ -293,7 +293,29 @@ function mod:BABuse(item, player)
     return {
         Discharge = true,
         Remove = false,
-        ShowAnim = true,
+        ShowAnim = true
     }
 end
 mod:AddCallback(ModCallbacks.MC_USE_ITEM, mod.BABuse, BlueAndBlack)
+local itemuds = Isaac.GetItemIdByName("PillSmaller")
+function mod:SmallerPillUse(item, player)
+    local playesdsr = Isaac.GetPlayer()
+    playesdsr:UsePill(PillEffect.PILLEFFECT_SMALLER, PillColor.PILL_BLUE_BLUE, UseFlag.USE_NOANIM)
+    return {
+        Discharge = true,
+        Remove = false,
+        ShowAnim = true
+    }
+end
+mod:AddCallback(ModCallbacks.MC_USE_ITEM, mod.SmallerPillUse, itemuds)
+local deathcertificates = Isaac.GetItemIdByName("Portable Death Certificate")
+function mod:Dcuse(item, player)
+    local deathuser = Isaac.GetPlayer()
+    deathuser:UseActiveItem(CollectibleType.COLLECTIBLE_DEATH_CERTIFICATE, UseFlag.USE_NOANIM)
+    return {
+        Discharge = true,
+        Remove = false,
+        ShowAnim = true
+    }
+end
+mod:AddCallback(ModCallbacks.MC_USE_ITEM, mod.Dcuse, deathcertificates)

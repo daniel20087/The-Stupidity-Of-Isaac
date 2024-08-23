@@ -4,7 +4,7 @@
     <passive id="3" name="Death" gfx="Death.png" description="Why" quality="0" cache = "damage teardelay" />
     <passive id="4" name="Life" gfx="Life.png" description="Why" quality="0" cache = "damage teardelay" />
     <passive id="5" name="The Middle Ground" gfx="TheMiddleGround.png" description="In between life and death" quality="4" cache = "damage firedelay" />
-    <passive id="6" name="Lucky Damage" gfx="LuckyDamage.png" description="More damage == More luck (Note Shitty Code)" quality="4" cache = "damage luck" />
+    <passive id="6" name="Lucky Damage" gfx="LuckyDamage.png" description="More damage == More luck" quality="4" cache = "damage luck" />
     <passive id="7" name="50 Cent" gfx="fifcent.png" description="Holy shit its 50 cent" quality="1" />
     <passive id="8" name="Torch" gfx="Torch.png" description="All stats up" quality="2" cache = "damage firedelay luck shotspeed range speed" />
     <passive id="9" name="All Up" gfx="allup.png" description="All Up" quality="3" cache = "damage firedelay luck shotspeed range speed" />
@@ -16,4 +16,6 @@
     <active id="15" name="Converto" gfx="CBK.png" description="Convert 5 coins into 2 keys and 2 bombs" quality="3" maxcharges="1" chargetype="normal" />
     <active id="16" name="Money == Health" gfx="MH.png" description="Convert 20 coins into a heart container" quality="3" maxcharges="1" chargetype="normal" />
     <active id="17" name="Blue And Black" gfx="BlueAndBlack.png" description="Adds 1 Black Heart And 1 Soul Heart" quality="3" maxcharges="6" chargetype="normal" />
+    <active id="18" name="PillSmaller" gfx="BlueBlue.png" description="Uses one makes you smaller pill" quality="3" maxcharges="3" chargetype="normal" />
+    <active id="19" name="Portable Death Certificate" gfx="collectibles_628_deathcertificate.png" description="Death Certificate but active" quality="4" maxcharges="24" chargetype="normal" />
 </items>
