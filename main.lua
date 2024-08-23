@@ -1,4 +1,4 @@
-local mod = RegisterMod("The Addictions of Isaac", 1)
+local mod = RegisterMod("The Stupidity of Isaac", 1)
 local BeerBottle = Isaac.GetItemIdByName("Beer Bottle")
 local BeerBottleDamage = 3
 local BeerBottleSpeed = 0.5
