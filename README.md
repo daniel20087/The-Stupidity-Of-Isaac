@@ -40,3 +40,7 @@ Converto: Converts 5 Coins into 2 Bombs and 2 Keys
 Money == Health: Converts 20 Coins into A Heart Container
 
 Blue and Black: Adds one soul heart and one black heart
+
+PillSmaller: actives one makes you smaller pill
+
+Portable Death certificate: Uses Death Certificate
