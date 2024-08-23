@@ -41,10 +41,10 @@ Money == Health: Converts 20 Coins into A Heart Container
 
 Blue and Black: Adds one soul heart and one black heart
 
-PillSmaller: actives one makes you smaller pill
+PillSmaller: activates one makes you smaller pill
 
-Portable Death certificate: Uses Death Certificate
+Portable Death certificate: active and Uses Death Certificate
 
-Portable Forget me now: uses forget me now
+Portable Forget me now: active and  uses forget me now
 
-Max speed: 2.0 speed
+Max speed: makes isaac have max speed
