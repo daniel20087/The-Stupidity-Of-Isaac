@@ -5,6 +5,7 @@ local BeerBottleSpeed = 0.5
 local Beer_Posion_Chance = 1
 local Beer_Poison_Length = 3
 local One_Interval_Of_Poison = 20 -- this fucks up if the user is running the game higher than 60 fps
+local tearmulti = 2
 
 function mod:EvaluateCache(player, cacheFlags)
     if cacheFlags & CacheFlag.CACHE_DAMAGE == CacheFlag.CACHE_DAMAGE then -- cacheflags makes the stat values update
@@ -72,7 +73,7 @@ function mod:Torch(player, cacheFlags)
     if TORCHITEMCOUNT > 0 then
         if cacheFlags & CacheFlag.CACHE_DAMAGE == CacheFlag.CACHE_DAMAGE then
             player.Damage = player.Damage + 0.8
-            player.MaxFireDelay = player.MaxFireDelay - 1.8
+            player.MaxFireDelay = player.MaxFireDelay / tearmulti
         end
         if cacheFlags & CacheFlag.CACHE_SPEED == CacheFlag.CACHE_SPEED then
             player.MoveSpeed = player.MoveSpeed + 0.17
@@ -118,7 +119,7 @@ function mod:TMG(player, cacheFlags)
     if cacheFlags & CacheFlag.CACHE_DAMAGE == CacheFlag.CACHE_DAMAGE then
         if TMGITEMCOUNT > 0 then
             player.Damage = player.Damage + 6
-            player.MaxFireDelay = player.MaxFireDelay  -7.25
+            player.MaxFireDelay = player.MaxFireDelay / tearmulti
         end
     end
 end
@@ -157,7 +158,7 @@ function mod:allup(player, cacheFlags)
     if Allupcs > 0 then
         if cacheFlags & CacheFlag.CACHE_DAMAGE == CacheFlag.CACHE_DAMAGE then
             player.Damage = player.Damage + 1
-            player.MaxFireDelay = player.MaxFireDelay - 2
+            player.MaxFireDelay = player.MaxFireDelay / tearmulti
         end
         if cacheFlags & CacheFlag.CACHE_SPEED == CacheFlag.CACHE_SPEED then
             player.MoveSpeed = player.MoveSpeed + 0.2
@@ -225,7 +226,7 @@ function mod:MotherM(player, cacheFlags)
     if mmcount > 0 then
         if cacheFlags & CacheFlag.CACHE_DAMAGE == CacheFlag.CACHE_DAMAGE then
             player.Damage = player.Damage + 15
-            player.MaxFireDelay = player.MaxFireDelay + 49  -- opposite of soy milk
+            player.MaxFireDelay = player.MaxFireDelay * tearmulti  -- opposite of soy milk
         end
     end
 end
