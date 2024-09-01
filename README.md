@@ -1,5 +1,5 @@
 # The-Stupidity-Of-Isaac
-Isaac mod
+Isaac mod with just straight whatever put into the game
 
 Code sucks but if it works it works
 
