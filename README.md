@@ -1,7 +1,7 @@
 # The-Stupidity-Of-Isaac
 Isaac mod with just straight whatever put into the game
 
-Code sucks but if it works it works
+Code still has some bugs but its good enough
 
 Download as zip and extract into isaac mods folder
 
