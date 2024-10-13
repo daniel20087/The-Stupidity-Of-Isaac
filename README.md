@@ -19,7 +19,7 @@ Life: 120 tear rate 0.30 damage (i couldn't make it any lower)
 
 The Middle Ground: Mix of Life and Death
 
-Lucky Damage: More Damage == More Luck (gets weird with damage multi's)
+Lucky Damage: More Damage == More Luck
 
 50 Cent: adds 50 cent
 
