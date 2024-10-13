@@ -3,9 +3,11 @@ local BeerBottle = Isaac.GetItemIdByName("Beer Bottle") --gets item id
 local BeerBottleDamage = 3
 local BeerBottleSpeed = 0.5
 local Beer_Posion_Chance = 1
+local i = 0
 local Beer_Poison_Length = 3
 local One_Interval_Of_Poison = 20 -- this fucks up if the user is running the game higher than 60 fps
-local tearmulti = 2
+local tearmulti = 1.5
+local hasap = false
 
 function mod:EvaluateCache(player, cacheFlags)
     if cacheFlags & CacheFlag.CACHE_DAMAGE == CacheFlag.CACHE_DAMAGE then -- cacheflags makes the stat values update
@@ -73,7 +75,10 @@ function mod:Torch(player, cacheFlags)
     if TORCHITEMCOUNT > 0 then
         if cacheFlags & CacheFlag.CACHE_DAMAGE == CacheFlag.CACHE_DAMAGE then
             player.Damage = player.Damage + 0.8
-            player.MaxFireDelay = player.MaxFireDelay / tearmulti
+            if hasap == false then
+                player.MaxFireDelay = player.MaxFireDelay +- tearmulti
+                hasap =  true
+            end
         end
         if cacheFlags & CacheFlag.CACHE_SPEED == CacheFlag.CACHE_SPEED then
             player.MoveSpeed = player.MoveSpeed + 0.17
@@ -119,21 +124,47 @@ function mod:TMG(player, cacheFlags)
     if cacheFlags & CacheFlag.CACHE_DAMAGE == CacheFlag.CACHE_DAMAGE then
         if TMGITEMCOUNT > 0 then
             player.Damage = player.Damage + 6
-            player.MaxFireDelay = player.MaxFireDelay / tearmulti
+            if hasap == false then
+                player.MaxFireDelay = player.MaxFireDelay +- tearmulti
+                hasap =  true
+            end
         end
     end
 end
 mod:AddCallback(ModCallbacks.MC_EVALUATE_CACHE, mod.TMG)
 
 local LD = Isaac.GetItemIdByName("Lucky Damage")
+local lastDamage = nil -- To store the player's last known damage value
 
 function mod:LuckyDamage(player, cacheFlags)
     local LDITEMCOUNT = player:GetCollectibleNum(LD)
+    
+    -- Check if the player has the item and if we're updating the damage cache flag
     if LDITEMCOUNT > 0 then
-        player.Luck = player.Damage * 0.3 -- this should explain what it does
+        -- If this is the first time the item is picked up (lastDamage is nil), initialize lastDamage
+        if lastDamage == nil then
+            lastDamage = player.Damage
+            -- Apply the initial luck adjustment based on the player's current damage
+            player.Luck = player.Luck + (player.Damage * 0.3)
+        end
+        
+        -- Check if the player's damage has changed since the last update
+        if player.Damage ~= lastDamage then
+            -- Reset the player's luck to prevent stacking
+            player.Luck = player.Luck - (lastDamage or 0) * 0.3
+            
+            -- Update the player's luck based on the new damage
+            player.Luck = player.Luck + (player.Damage * 0.3)
+            
+            -- Store the current damage value for future comparisons
+            lastDamage = player.Damage
+        end
     end
 end
+
+-- Callback for updating stats whenever the cache is recalculated
 mod:AddCallback(ModCallbacks.MC_EVALUATE_CACHE, mod.LuckyDamage)
+
 local fiftycens = Isaac.GetItemIdByName("50 Cent")
 local hasAddedCoins = false
 function mod:fiftycent(player)
@@ -226,7 +257,10 @@ function mod:MotherM(player, cacheFlags)
     if mmcount > 0 then
         if cacheFlags & CacheFlag.CACHE_DAMAGE == CacheFlag.CACHE_DAMAGE then
             player.Damage = player.Damage + 15
-            player.MaxFireDelay = player.MaxFireDelay * tearmulti  -- opposite of soy milk
+            if hasap == false then
+                player.MaxFireDelay = player.MaxFireDelay * tearmulti
+                hasap =  true 
+            end
         end
     end
 end
@@ -267,7 +301,7 @@ function mod:ConvertoUse(item, player)
     }
 end
 mod:AddCallback(ModCallbacks.MC_USE_ITEM, mod.ConvertoUse, converto)
-local mequalh = Isaac.GetItemIdByName("Money == Health")
+local mequalh = Isaac.GetItemIdByName("Money = Health")
 function mod:mequalhuse(item, player)
     local mequaluser = Isaac.GetPlayer()
     local money = mequaluser:GetNumCoins()
@@ -298,7 +332,7 @@ function mod:BABuse(item, player)
     }
 end
 mod:AddCallback(ModCallbacks.MC_USE_ITEM, mod.BABuse, BlueAndBlack)
-local itemuds = Isaac.GetItemIdByName("PillSmaller")
+local itemuds = Isaac.GetItemIdByName("Smallest Of Pills")
 function mod:SmallerPillUse(item, player)
     local playesdsr = Isaac.GetPlayer()
     playesdsr:UsePill(PillEffect.PILLEFFECT_SMALLER, PillColor.PILL_BLUE_BLUE, UseFlag.USE_NOANIM)
@@ -330,7 +364,7 @@ function mod:Pfmn(item, player)
     }
 end
 mod:AddCallback(ModCallbacks.MC_USE_ITEM, mod.Pfmn, pfd)
-local msa = Isaac.GetItemIdByName("Max Speed")
+local msa = Isaac.GetItemIdByName("Sonic Boots")
 function mod:ms(player, cacheFlags)
     local msaamount = player:GetCollectibleNum(msa)
     if msaamount > 0 then
