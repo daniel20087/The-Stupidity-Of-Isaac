@@ -14,10 +14,10 @@
     <passive id="13" name="Mother's Milk" gfx="MM.png" description="Oi UE ITS MM" quality="2" cache= "firedelay damage" /> 
     <active id="14" name="Blue ArachDiptera" gfx="SF.png" description="Spawns 5 Blue flies and 5 Blue spiders" quality="3" maxcharges="1" chargetype="normal" />
     <active id="15" name="Converto" gfx="CBK.png" description="Convert 5 coins into 2 keys and 2 bombs" quality="3" maxcharges="1" chargetype="normal" />
-    <active id="16" name="Money == Health" gfx="MH.png" description="Convert 20 coins into a heart container" quality="3" maxcharges="1" chargetype="normal" />
+    <active id="16" name="Money = Health" gfx="MH.png" description="Convert 20 coins into a heart container" quality="3" maxcharges="1" chargetype="normal" />
     <active id="17" name="Blue And Black" gfx="BlueAndBlack.png" description="Adds 1 Black Heart And 1 Soul Heart" quality="3" maxcharges="6" chargetype="normal" />
-    <active id="18" name="PillSmaller" gfx="BlueBlue.png" description="Uses one makes you smaller pill" quality="3" maxcharges="3" chargetype="normal" />
+    <active id="18" name="Smallest Of Pills" gfx="BlueBlue.png" description="Uses one makes you smaller pill" quality="3" maxcharges="3" chargetype="normal" />
     <active id="19" name="Portable Death Certificate" gfx="collectibles_628_deathcertificate.png" description="Death Certificate but active" quality="4" maxcharges="24" chargetype="normal" />
     <active id="20" name="Portable Forget me now" gfx="collectibles_127_forgetmenow.png" description="Active Forget Me Now" quality="3" maxcharges="24" chargetype="normal" />
-    <passive id="21" name="Max Speed" gfx="SpeedCoil.png" description="Max Speed" quality="3" cache = "speed" />
+    <passive id="21" name="Sonic Boots" gfx="SpeedCoil.png" description="Max Speed" quality="3" cache = "speed" />
 </items>
