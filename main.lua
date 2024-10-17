@@ -258,7 +258,7 @@ function mod:MotherM(player, cacheFlags)
         if cacheFlags & CacheFlag.CACHE_DAMAGE == CacheFlag.CACHE_DAMAGE then
             player.Damage = player.Damage + 5.5
             if hasap == false then
-                player.MaxFireDelay = player.MaxFireDelay * (tearmulti + 0.5)
+                player.MaxFireDelay = player.MaxFireDelay * (tearmulti * 2)
                 hasap =  true 
             end
         end
