@@ -256,9 +256,9 @@ function mod:MotherM(player, cacheFlags)
     local mmcount = player:GetCollectibleNum(mm)
     if mmcount > 0 then
         if cacheFlags & CacheFlag.CACHE_DAMAGE == CacheFlag.CACHE_DAMAGE then
-            player.Damage = player.Damage + 15
+            player.Damage = player.Damage + 5.5
             if hasap == false then
-                player.MaxFireDelay = player.MaxFireDelay * (tearmulti + 1)
+                player.MaxFireDelay = player.MaxFireDelay * (tearmulti + 0.5)
                 hasap =  true 
             end
         end
