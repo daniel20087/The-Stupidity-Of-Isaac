@@ -178,6 +178,7 @@ mod:AddCallback(ModCallbacks.MC_EVALUATE_CACHE, mod.fiftycent)
 
 local AllUP = Isaac.GetItemIdByName("All Up")
 local Hasadded = false
+local hasps = false
 function mod:allup(player, cacheFlags)
     local Allupcs = player:GetCollectibleNum(AllUP)
     if Allupcs > 0 and Hasadded == false then -- same as torch but adds some coins and bombs and keys
@@ -189,7 +190,10 @@ function mod:allup(player, cacheFlags)
     if Allupcs > 0 then
         if cacheFlags & CacheFlag.CACHE_DAMAGE == CacheFlag.CACHE_DAMAGE then
             player.Damage = player.Damage + 1
-            player.MaxFireDelay = player.MaxFireDelay / tearmulti
+            if hasps == false then
+                player.MaxFireDelay = player.MaxFireDelay / tearmulti
+                hasps = true
+            end
         end
         if cacheFlags & CacheFlag.CACHE_SPEED == CacheFlag.CACHE_SPEED then
             player.MoveSpeed = player.MoveSpeed + 0.2
